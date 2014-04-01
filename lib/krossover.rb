@@ -1,36 +1,30 @@
 require 'httparty'
 class Krossover
-  attr_accessor :title, :paragraph
-  def initialize()
-    get_data
+  def initialize
+    #get_ko_data
+   # build_games(get_ko_data)
   end
 
-  def get_data
-    HTTParty.post('https://api.narrativescience.com/v3/single/Krossover/KrossoverBasketballGameRecap',
-                             :basic_auth => {:username => ENV['NARRATIVE_KEY'], :password => ENV['NARRATIVE_SECRET']},
-                             :headers => {"Content-Type" => "application/json"},
-                             :body => {"data" => {"game_id"=> 103000,
-                                                  "username"=> ENV['NARRATIVE_BODY_KEY'],
-                                                  "password"=> ENV['NARRATIVE_BODY_SECRET']},
-                                       "context"=> {"game_id"=> 103000}
-                                      }.to_json
-                            )
+
+  def build_games(ko_data)
+    ko_data.each do |game|
+      ko_game = KrossoverGame.new(game)
+      local_game = Game.first_or_initialize()
+      if local_game.save
+        ns = NarrativeScience.new(game_id)
+        ko_game.title = ns.title
+        ko_game.summary = ns.summary
+      end
+    end
   end
 
-  def data
-    JSON.parse(get_data.body)
-  end
-
-  def title
-     data["response"]["title"]
-  end
-
-  def paragraph
-    data["response"]["paragraphs"]
+  def get_ko_data
+    ko_data = HTTParty.get('http://www.krossover.com/intelligence/feed/games',
+                :basic_auth => { :username => "SINY",
+                                 :password => "RSD72aH1uBlIdcX"})
+    JSON.parse(ko_data)
   end
 end
 
-game = Krossover.new
-
-puts game.title
-puts game.paragraph
+a = Krossover.new
+puts a.get_ko_data
