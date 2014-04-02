@@ -1,5 +1,7 @@
 module SchoolHelper
+	def status(boolean)
+		#decide whether text should be green or red.
+		boolean == true ? "text-success" : "text-warning"
+	end
 end
- def win?(home_score, opponent_score)
-   		home_score >= opponent_score ? status = "text-success" : status = "text-warning"
-   end
+

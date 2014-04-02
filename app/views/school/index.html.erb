@@ -1,33 +1,28 @@
 <div class="container">
-
-<div class="text-warning">
-<table cellpadding="10">
-<tr>
-<td>
-<%=image_tag(@school.logo_url, size: "75")%>
-</td>
-<td valign="bottom">
-<h2><%=@school.name%> (<%=@school.city%>, <%=@school.state%>)</h2>
-</td>
-</tr>
-</table>
-<br><br>
-</div>
-<table class="table table-bordered table-hover table-striped" style="width: 75%;">
-<%@school.teams.each do |team|%>
-	<tr>
+	<div class="text-warning">
+		<table cellpadding="10">
+			<tr>
+				<td>
+					<%=image_tag(@school.logo_url, size: "75")%>
+				</td>
+				<td valign="bottom">
+					<h2><%=@school.name%> (<%=@school.city%>, <%=@school.state%>)</h2>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+	</div>
+	<table class="table table-bordered table-hover table-striped" style="width: 75%;">
+		<%@school.teams.each do |team|%>
 		<th>Team</th>
 		<th><b>Games</th>
+		<tr>
+			<td><%=link_to team.name, "#"%></td>
+			<td><%team.games.sort_by(&:date).each do |game|%>
+				<%=link_to game.date, "#", :class => status(game.win?)%><br>
+			<%end%>
+			</td>
 	</tr>
-	<%= @school_image %>
-	<tr>
-		<td><%=link_to team.name, "#"%></td>
-		<td><%team.games.sort_by(&:date).each do |game|%>
-			<%=link_to game.date, "#", :class => @school.win?(game.score, game.opponent_score)%><br>
-			</div>
-			<%end%></td>
-	</tr>
-
 <%end%>
 <table>
 </div>
