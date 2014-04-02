@@ -6,7 +6,7 @@ Iverson::Application.routes.draw do
   # root 'welcome#index'
 
   # Example of regular route:
-  get '/school' => 'school#index'
+  get '/school/:id' => 'school#index'
   get '/game' => 'game#index'
   get '/team' => 'team#index'
 
