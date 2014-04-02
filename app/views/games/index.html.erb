@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game Detail</title>
+</head>
+<body>
+Game Detail
+
+<% @game_stats.each do |g| %>
+  <li> <%= g.score %> </li>
+  <li> <%= g.summary %> </li>
+<% end %>
+
+</body>
+</html>
