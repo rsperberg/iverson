@@ -4,12 +4,16 @@
 <title>Game Detail</title>
 </head>
 <body>
-Game Detail
+Game Detail<p>
 
-<% @game_stats.each do |g| %>
-  <li> <%= g.score %> </li>
-  <li> <%= g.summary %> </li>
-<% end %>
+<img src="<%= @game_stats.team.school.logo_url %>"><p>
+<%= @game_stats.team.name %>: <%= @game_stats.score %> <p>
+Opponent Name NEED TO ADD THIS TO THE SCHEMA <%= @game_stats.opponent_score%><p>
+Summary <%= @game_stats.summary%><p>
+	
+<video controls>
+<source src="<%= @game_stats.video_url%>" type="video/mp4">
+	</video>
 
 </body>
 </html>
