@@ -3,20 +3,23 @@
 <%= @team.school.name %><br />
 <%= @team.school.city + ', ' + @team.school.state %><br />
 <br />
+<h2>Game History</h2>
 <table>
-<tr><td>Score</td>
-<td>Opponent</td>
-<td>Opponent Score</td>
-<td>Date</td>
-<td>Video Link</td>
+<tr>
+	<td>Score</td>
+	<td>Opponent</td>
+	<td>Opponent Score</td>
+	<td>Date</td>
+	<td>Video Link</td>
 </tr>
+
 <% @team.games.each do |g| %>
 <tr text-align: 'center'>
 	<td><%= g.score %></td>
 	<td><%= Team.find(g.opponent_id).name %></td>
 	<td><%= g.opponent_score %></td>
 	<td><%= g.date %></td>
-	<td><%= video_tag( g.video_url, :controls => true) %> </td>
+	<td><%= link_to "Visit Other Site", g.video_url %></td>
 </tr>
 <% end %>
 

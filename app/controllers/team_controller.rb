@@ -1,6 +1,6 @@
 class TeamController < ApplicationController
 	def index
-		@team = Team.all
+		@teams = Team.all
 	end
 	
 	def show
