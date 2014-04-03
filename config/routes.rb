@@ -4,7 +4,9 @@ Iverson::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  get '/team/show/:id' => 'team#show'
+  get '/team/index' => 'team#index'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
