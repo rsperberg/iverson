@@ -5,9 +5,13 @@ Iverson::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
+  get '/team/show/:id' => 'team#show'
+  get '/team/index' => 'team#index'
+  
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+  get '/school/:id' => 'school#index'
+  get '/game' => 'game#index'
+  get '/team' => 'team#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

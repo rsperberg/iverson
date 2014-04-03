@@ -24,6 +24,11 @@
                      video_url: "http://prod-m100.cdn.krossover.com/prod-basketball2-2014-1ef799b224cffc8d2337-1600.mp4",
                      date: "03/03/2014", team_id: 7, opponent_score: 0, opponent_id: 10 )
 
+  Game.create(ko_game_id: 02, score: 78, is_home: false,
+                      summary: "Throw it down big man",
+                     video_url: "http://prod-m100.cdn.krossover.com/prod-basketball2-2014-1ef799b224cffc8d2337-1600.mp4",
+                     date: "03/04/2014", team_id: 7, opponent_score: 20, opponent_id: 10 )					 
+					 
   Team.create(id: 5, school_id: 10, ko_team_id: 123, name: "Pukesville Vomits")
   Team.create(id: 6, school_id: 20, ko_team_id: 234, name: "Dorktown Remedials")
   Team.create(id: 7, school_id: 30, ko_team_id: 345, name: "Bland City Excitements")
