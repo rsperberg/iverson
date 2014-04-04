@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game Detail</title>
+</head>
+<body>
+Game Detail<p>
+
+<img src="<%= @game_stats.team.school.logo_url %>"><p>
+
+<%	if @game_stats.is_home == true %>
+	<%= "Home" %>
+<%	else %>
+	<%=	"Away" %>
+<% end %>
+
+ - <%= @game_stats.team.name %>: <%= @game_stats.score %> <p>
+*ADD <b>OPPONENT NAME</b> TO THE SCHEMA*: <%= @game_stats.opponent_score%><p>
+Summary <%= @game_stats.summary%><p>
+	
+<video controls>
+<source src="<%= @game_stats.video_url%>" type="video/mp4">
+	</video><p>
+LINK TO TEAM PROFILE
+</body>
+</html>
