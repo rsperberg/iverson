@@ -1,0 +1,158 @@
+[33mcommit d0b4bbdc34ae8967d7bf8f95e1f58de6ffa68281[m
+Author: Doug Helferich <dhelf17@gmail.com>
+Date:   Tue Apr 8 12:02:10 2014 -0400
+
+    dh master changes. added home controler
+
+[33mcommit a91c874316074a7a03dfc4a43ce69c45716cd145[m
+Merge: 4886769 f2f84d9
+Author: Richard Lau <richardlau.rlau@gmail.com>
+Date:   Fri Apr 4 14:34:13 2014 -0400
+
+    Merge branch 'master' of github.com:iRichLau/iverson
+
+[33mcommit 4886769333c2ac1b88914fc516b45b945f4d846b[m
+Author: Richard Lau <richardlau.rlau@gmail.com>
+Date:   Fri Apr 4 14:34:01 2014 -0400
+
+    Add Gemfile/
+
+[33mcommit f2f84d9382c9378f13fea52833aaf81713e2d4cb[m
+Merge: 50fd35d 78a88c9
+Author: Joe Schoech <jschoech@gmail.com>
+Date:   Thu Apr 3 11:55:06 2014 -0400
+
+    Merge branch 'master' of https://github.com/iRichLau/iverson
+
+[33mcommit 50fd35dd3e86017ad7e878cc54b79abcf83c1fba[m
+Author: Joe Schoech <jschoech@gmail.com>
+Date:   Thu Apr 3 11:51:49 2014 -0400
+
+    Update ignore file
+
+[33mcommit 054c9198d89d43e806311eed410399f8e204f944[m
+Author: Joe Schoech <jschoech@gmail.com>
+Date:   Thu Apr 3 11:21:40 2014 -0400
+
+    endit html
+
+[33mcommit 78a88c937eab8a8063d05423f382cba0cb782ca6[m
+Author: Doug Helferich <dhelf17@gmail.com>
+Date:   Thu Apr 3 10:59:26 2014 -0400
+
+    added video links to team profile view -dh
+
+[33mcommit 6147ce27ecd3a13e73f0da8fd307aca6328cb17d[m
+Author: Doug Helferich <dhelf17@gmail.com>
+Date:   Thu Apr 3 00:22:57 2014 -0400
+
+    Fixing merge conflicts.
+    
+    -dh
+
+[33mcommit 52aa2db9c7f16c5c2d5168236c4ee285e9dd81e9[m
+Merge: 98f45c8 b91049b
+Author: Doug Helferich <dhelf17@gmail.com>
+Date:   Wed Apr 2 23:45:58 2014 -0400
+
+    Merge branch 'master' of https://github.com/iRichLau/iverson into team-views
+    
+    Conflicts:
+    	Gemfile
+    	Gemfile.lock
+    	app/assets/stylesheets/team.css.scss
+    	app/controllers/team_controller.rb
+
+[33mcommit 98f45c859c7927275606f25c011273cc43958be2[m
+Author: Doug Helferich <dhelf17@gmail.com>
+Date:   Wed Apr 2 23:27:34 2014 -0400
+
+    added team index view and team controller, as well as corresponding routes.
+    
+    -dh
+
+[33mcommit b91049b2dc352179aaebd00f1373d4b38d77f9cb[m
+Author: Simon <simon.slater@gmail.com>
+Date:   Wed Apr 2 19:49:35 2014 -0400
+
+    games change
+
+[33mcommit dd3e0d127945ebfd00fb860a3b2d2b7357384c34[m
+Author: Simon <simon.slater@gmail.com>
+Date:   Wed Apr 2 12:32:39 2014 -0400
+
+    further refactor of view
+
+[33mcommit 512936e8a9589c4809a84554002ca1efd50de8b8[m
+Author: Simon <simon.slater@gmail.com>
+Date:   Wed Apr 2 12:31:47 2014 -0400
+
+    refactor School view model and helper
+
+[33mcommit 30f783eecc39bfdc8c29fa84d55fbb5f812ad51a[m
+Author: Joe Schoech <jschoech@gmail.com>
+Date:   Wed Apr 2 12:14:48 2014 -0400
+
+    games view done
+
+[33mcommit 9a5b3393b4959ad2d87055ec7c971bb4c6edeedf[m
+Author: Joe Schoech <jschoech@gmail.com>
+Date:   Wed Apr 2 00:47:14 2014 -0400
+
+    create game view for real
+
+[33mcommit 7803a80c3f5a41f40ccc7f84e114ecad5597f5a2[m
+Author: Doug Helferich <dhelf17@gmail.com>
+Date:   Tue Apr 1 22:47:46 2014 -0400
+
+    added team views folder and controller
+    
+    -dh
+
+[33mcommit 9821b26122a8e3fe2b59436255ee57ffe8491643[m
+Author: Simon <simon.slater@gmail.com>
+Date:   Tue Apr 1 21:41:04 2014 -0400
+
+    add team route
+
+[33mcommit 8ea3fc964aaada0c831f955a9311c429e0ee54df[m
+Author: Simon <simon.slater@gmail.com>
+Date:   Tue Apr 1 21:38:53 2014 -0400
+
+    add game route
+
+[33mcommit 7a6ed0b1ad9db6022b053ec1c80e6716c0818073[m
+Author: Simon <simon.slater@gmail.com>
+Date:   Tue Apr 1 21:37:26 2014 -0400
+
+    add school route
+
+[33mcommit a0a60875093f30dc89973f9fa3f1ce5358a3f7a3[m
+Author: Richard Lau <richardlau.rlau@gmail.com>
+Date:   Tue Apr 1 15:37:29 2014 -0400
+
+    Fix seed data
+
+[33mcommit 6173166e7427fb62a2c5bc450217ab2f867fa05d[m
+Author: Richard Lau <richardlau.rlau@gmail.com>
+Date:   Tue Apr 1 14:25:59 2014 -0400
+
+    Add seed data
+
+[33mcommit ac152e541d89dc51afd0190beb6d60479021746c[m
+Author: Richard Lau <richardlau.rlau@gmail.com>
+Date:   Tue Apr 1 11:28:18 2014 -0400
+
+    Create Game, School and Team models and it's relationship.
+
+[33mcommit 84b18a4a1e44ae242cd46e5225ae75fe70ea35dd[m
+Author: Richard Lau <richardlau.rlau@gmail.com>
+Date:   Tue Apr 1 11:09:55 2014 -0400
+
+    Seperate NarrativeScience and KOGame into its own class.
+
+[33mcommit 60384e622b9ef35c0b58911aae350aade4c6afb7[m
+Author: Richard Lau <richardlau.rlau@gmail.com>
+Date:   Tue Mar 25 16:28:32 2014 -0400
+
+    Set up Narrative API Wrapper

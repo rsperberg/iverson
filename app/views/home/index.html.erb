@@ -1,3 +1,10 @@
+<h2>Featured games for: <%= @date %> </h2>
+<br/>
+<br/>
+
 <% @game.each do |g| %>
-	<%= g.summary %><br />
+	<div class = "well">
+		<%= g.team.name %> vs. <%= Team.find(g.opponent_id).name %><br />
+		<%= g.score %> - <%= g.opponent_score %><br />
+	</div>
 <% end %>
