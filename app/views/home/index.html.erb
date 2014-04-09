@@ -5,10 +5,10 @@
 <ul>
 <% @game.each do |g| %>
 	<li><div class = "">
-		<h4><%= g.team.name %> vs. <%= Team.find(g.opponent_id).name %></h4><br />
+		<h4><%= link_to g.team.name, controller: "team", action: "show", id: g.team.id %> vs. <%= link_to Team.find(g.opponent_id).name, controller: "team", action: "show", id: g.opponent_id %></h4><br />
 		<%= g.date %><br />
 		<%= g.score %> - <%= g.opponent_score %><br />
-		<b>Game Summary</b><br />
+		<b><%= link_to "Game Summary", controller: "games", action: "show", id: g.id %></b><br />
 		<%= g.summary %><br />
 	</div></li>
 <% end %>
