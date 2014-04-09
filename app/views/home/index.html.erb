@@ -6,6 +6,7 @@
 <% @game.each do |g| %>
 	<li><div class = "">
 		<h4><%= g.team.name %> vs. <%= Team.find(g.opponent_id).name %></h4><br />
+		<%= g.date %><br />
 		<%= g.score %> - <%= g.opponent_score %><br />
 		<b>Game Summary</b><br />
 		<%= g.summary %><br />

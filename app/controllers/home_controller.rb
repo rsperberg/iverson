@@ -5,7 +5,7 @@ class HomeController < ApplicationController
 		if Game.where(["date LIKE :tag", {:tag => @date}]).count > 100
 			@game =  Game.where(["date LIKE :tag", {:tag => @date}]).first(100) 
 		else
-			@game = Game.all.first(100)
+			@game = Game.all.first(100).reverse
 		end
 	end
 end
