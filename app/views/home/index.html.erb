@@ -2,9 +2,13 @@
 <br/>
 <br/>
 
+<ul>
 <% @game.each do |g| %>
-	<div class = "well">
-		<%= g.team.name %> vs. <%= Team.find(g.opponent_id).name %><br />
+	<li><div class = "">
+		<h4><%= g.team.name %> vs. <%= Team.find(g.opponent_id).name %></h4><br />
 		<%= g.score %> - <%= g.opponent_score %><br />
-	</div>
+		<b>Game Summary</b><br />
+		<%= g.summary %><br />
+	</div></li>
 <% end %>
+</ul>
