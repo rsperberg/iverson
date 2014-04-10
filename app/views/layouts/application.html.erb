@@ -8,24 +8,24 @@
       href="http://www.krossover.com/wp-content/uploads/2013/10/favicon1.jpg">
 </head>
 <body>
-
- <div id="search">
-    <%= render :partial => 'school/search' %>
-  </div>
-
-
+	
 <div class="mynavbar">
-<a href="http://krossover.com"><img src="/assets/krossover-logo-type-transparent.png" width="640px" height="100px"/></a>
-<ul>
-<li>Teams</li>
-<li><%= link_to "Games", controller: "home", action: "index" %></li>
-<li>About</li>
-</ul>
+	<a href="http://krossover.com"><img src="/assets/krossover-logo-type-transparent.png" width="320px" height="50px"/></a>
+	<ul>
+		<li>Teams</li>
+		<li><%= link_to "Games", controller: "home", action: "index" %></li>
+		<li>About</li>
+	</ul>
 </div>
 
->>>>>>> dhchanges
+<div id="search">
+	<%= render :partial => 'school/search' %>
+</div>
+
 <%= yield %>
 
-
+<div class="footer">
+	<p>This is a footer.
+</div>
 </body>
 </html>
