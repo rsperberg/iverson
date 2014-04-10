@@ -4,12 +4,28 @@
   <title>Iverson</title>
   <%= csrf_meta_tags %>
   <link href="/assets/stylesheets/bootstrap.css" media="screen" rel="stylesheet">
+  <link rel="icon" type="image/jpg" 
+      href="http://www.krossover.com/wp-content/uploads/2013/10/favicon1.jpg">
 </head>
 <body>
+
  <div id="search">
     <%= render :partial => 'school/search' %>
   </div>
+
+
+<div class="mynavbar">
+<a href="http://krossover.com"><img src="/assets/krossover-logo-type-transparent.png" width="640px" height="100px"/></a>
+<ul>
+<li>Teams</li>
+<li><%= link_to "Games", controller: "home", action: "index" %></li>
+<li>About</li>
+</ul>
+</div>
+
+>>>>>>> dhchanges
 <%= yield %>
+
 
 </body>
 </html>
