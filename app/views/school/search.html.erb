@@ -1,0 +1,22 @@
+<br>
+<div class="container">
+	<table class="table table-bordered table-hover table-striped" style="width: 45%;">
+		<%@results.each do |result|%>
+		<tr>
+			<td><b>School</b></td>
+			<td><b>Team</b></td>
+			<td><b>City</b></td>
+			<td><b>State</b></td>
+		</tr>
+		<tr>
+			<td><%=link_to result.name, "#"%></td>
+			<td><%result.teams.each do |team|%>
+				<%=team.name%><br>
+				<% end %>
+			</td>
+			<td><%=result.city%></td>
+			<td><%=result.state%></td>
+	</tr>
+<%end%>
+<table>
+</div>

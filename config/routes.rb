@@ -8,7 +8,7 @@ Iverson::Application.routes.draw do
   get '/team/show/:id' => 'team#show'
   get '/team/index' => 'team#index'
   
-  # Example of regular route:
+  post '/school/search'
   get '/school/:id' => 'school#index'
   get '/game' => 'game#index'
   get '/team' => 'team#index'

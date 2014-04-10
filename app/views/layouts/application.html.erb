@@ -5,7 +5,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+ <div id="search">
+    <%= render :partial => 'school/search' %>
+  </div>
 <%= yield %>
 
 </body>
