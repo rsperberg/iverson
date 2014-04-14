@@ -1,15 +1,23 @@
-<h2>Featured games for: <%= @date %> </h2>
-<br/>
-<br/>
 
-<ul>
-<% @game.each do |g| %>
-	<li><div class = "">
-		<h4><%= link_to g.team.name, controller: "team", action: "show", id: g.team.id %> vs. <%= link_to Team.find(g.opponent_id).name, controller: "team", action: "show", id: g.opponent_id %></h4><br />
-		<%= g.date %><br />
-		<%= g.score %> - <%= g.opponent_score %><br />
-		<b><%= link_to "Game Summary", controller: "games", action: "show", id: g.id %></b><br />
-		<%= g.summary %><br />
-	</div></li>
-<% end %>
-</ul>
+
+
+
+<section class='container siny-games'>
+    <div class='row'>		
+		<% @game.first(9).each do |g| %>
+			<div class='col-sm-4 siny-game'>
+				<div class="siny-team-links">
+				<%= link_to g.team.name, controller: "team", action: "show", id: g.team.id %> <%= g.score %><br>
+					<%= link_to Team.find(g.opponent_id).name, controller: "team", action: "show", id: g.opponent_id %> <%= g.opponent_score %><br/>
+				</div>
+				<%= link_to g.summary, controller: "games", action: "show", id: g.id %><br/>
+				<a href="#">Box Score</a></br>
+				<%= g.date %><br/>
+			</div>
+		<% end %>
+		
+		</div>
+		</section>
+		
+
+</section>

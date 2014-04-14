@@ -1,0 +1,69 @@
+.siny-search {
+	margin: 20px 0 0;
+	padding: 20px;
+	border-left-style:solid;
+	border-left-width: 1px;
+	border-left-color: #c0c0c0;
+	float: left;
+	height: 70px;
+	
+}
+
+.siny-search input{
+	line-height: 30px;
+	font-size: 1.5em;
+
+}
+
+
+
+@media screen and (max-width: 991px){
+	
+	.siny-search {
+		border-left-width: 0px;
+		padding: 20px;
+		
+		
+	}
+	
+}
+
+
+.product .siny-games {
+	font-weight: bold;
+	font-size: 1.25em !important;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 22px;
+    
+}
+.product .siny-games .siny-game {
+    border-left: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.product .siny-games .siny-game:nth-child(3n+1) {
+    border-left: none;
+}
+
+.product .siny-games .siny-game:nth-last-child(-n+3) {
+    border-bottom: none;
+}
+
+.siny-team-links a {
+	color: black !important;
+}
+
+.siny-detail{
+	text-align: left !important;
+}
+
+.siny-summary {
+	font-weight: 300;
+}
+
+td, th, tbody, .table-bordered {
+	border-width: 0px !important;
+}
+
