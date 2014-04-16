@@ -9,7 +9,7 @@ Iverson::Application.routes.draw do
   get '/team/index' => 'team#index'
   
   post '/school/search'
-  get '/school/:id' => 'school#index'
+  get '/school/index' => 'school#index'
   get '/games/:id' => 'games#show'
   get '/team' => 'team#index'
 
