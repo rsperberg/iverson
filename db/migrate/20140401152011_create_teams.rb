@@ -4,7 +4,6 @@ class CreateTeams < ActiveRecord::Migration
       t.integer :school_id
       t.integer :ko_team_id
       t.string :name
-
       t.timestamps
     end
   end

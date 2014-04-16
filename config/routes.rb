@@ -7,11 +7,11 @@ Iverson::Application.routes.draw do
   get '/' => 'home#index'
   get '/team/show/:id' => 'team#show'
   get '/team/index' => 'team#index'
-  
-  post '/school/search'
-  get '/school/:id' => 'school#index'
+
+  post '/schools/search'
+  get '/schools/:id' => 'school#index'
   get '/games/:id' => 'games#show'
-  get '/team' => 'team#index'
+  get '/teams' => 'team#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

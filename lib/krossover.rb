@@ -3,6 +3,8 @@ require 'debugger'
 require 'pry'
 
 class Krossover
+  # include Game
+
   def initialize
     get_ko_data
     feed_data(get_ko_data)
@@ -11,24 +13,41 @@ class Krossover
   def feed_data(ko_games)
     ko_games.each do |game|
       build_game(game)
-      game["teams"].each do |data|
-        build_team(data)
-        build_school(data) unless data["institution"].nil?
-      end
     end
   end
 
-  def build_games(data)
+  def build_game(data)
+    team = data["teams"][0]
+    opponent = data["teams"][1]
+
+    ko_school = build_school(team) unless team["institution"].nil?
+    ko_team = build_team(team)
+
+    ko_team.update_attribute(:school_id, ko_school.id) unless team["institution"].nil?
     ko_game = KrossoverGame.new(data)
+
+
     local_game = Game.where(ko_game.as_json).first_or_initialize()
 
-    if local_game != Game.first && local_game.save
+    if local_game.new_record?
+      local_game.team_id = ko_team.id
+      #boxscore updates wil nil logic
+      if !team["boxScore"].nil?
+        local_game.boxscore = team["boxScore"]
+      end
+
+      if !opponent["boxScore"].nil?
+        local_game.opponent_boxscore = opponent["boxScore"]
+      end
+
+      #narrative_science updates
       game_id = local_game.ko_game_id
-      binding.pry
       ns = NarrativeScience.new(game_id)
       local_game.title = ns.title
       local_game.summary = ns.summary
+      local_game.save
     end
+
   end
 
   def build_team(data)
