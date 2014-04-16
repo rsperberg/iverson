@@ -1,6 +1,6 @@
 <section class='container siny-games' id="siny-results">
 	<% @schools.each do |t| %>
-<%= t.name %><br />
+<%= link_to t.name, "/school/show/#{t.id}" %><br />
 <% end %>
 </section>
 
