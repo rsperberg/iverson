@@ -1,14 +1,14 @@
 <section class='container siny-games'>
 <div class="siny-detail">
 <div class="siny-score">
-<%= link_to @game_stats.team.name, "/team/show/#{@game_stats.team.id}" %>
+<%= link_to @game_stats.team.name, "/team/show/#{@game_stats.team.id}" %> -
 
 <%	if @game_stats.is_home == true %>
-	<%= "(Home)" %>
+	<%= "home:" %>
 <%	else %>
-	<%=	"(Away)" %>
-<% end %>
-: <%= @game_stats.score %><br> 
+	<%=	"away:" %>
+<% end %> 
+<%= @game_stats.score %><br> 
 
 <%= Team.find(@game_stats.opponent_id).name %>: <%= @game_stats.opponent_score %><br>
 </div>
