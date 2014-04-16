@@ -1,10 +1,16 @@
-<%= image_tag(@team.school.logo_url, :alt => @team.name) %><br />
-<%= @team.name %><br />
-<%= @team.school.name %><br />
-<%= @team.school.city + ', ' + @team.school.state %><br />
+<section class='container siny-games' id="siny-results">
+	    <div class='row'>		
+				<div class='col-sm-1'>
+<%= image_tag(@team.school.logo_url, :alt => @team.name, size: "75") %><br />
+</div>
+<div class='col-sm-11'>
+<h2><%= @team.name %><br /></h2>
+<h3><%= @team.school.name %>, <%= @team.school.city + ', ' + @team.school.state %><br /></h3>
 <br />
-<h2>Game History</h2>
-<table>
+</div>
+</div>
+<h2 id="siny-history">Game History</h2>
+<table class="table table-striped">
 <tr>
 	<td>Score</td>
 	<td>Opponent</td>
