@@ -35,20 +35,46 @@
     padding: 40px 20px;
     text-align: center;
     font-size: 22px;
+	height: 100%;
     
 }
+
 .product .siny-games .siny-game {
     border-left: 1px solid #ddd;
 	border-bottom: 1px solid #ddd;
     padding-top: 20px;
     padding-bottom: 20px;
+	
 }
+
 .product .siny-games .siny-game:nth-child(3n+1) {
     border-left: none;
 }
 
 .product .siny-games .siny-game:nth-last-child(-n+3) {
     border-bottom: none;
+}
+
+#siny-results {
+	text-align: left;
+}
+
+#siny-results h2 {
+	text-align: left;
+	margin: 0;
+}
+
+#siny-scools {
+	padding-top: 20px;
+}
+
+.product .siny-search {
+	font-weight: bold;
+	font-size: 1.25em !important;
+    padding: 40px 20px;
+    text-align: left;
+    font-size: 22px;
+    
 }
 
 .siny-team-links a {
@@ -63,7 +89,15 @@
 	font-weight: 300;
 }
 
-td, th, tbody, .table-bordered {
+/** td, th, tbody, .table-bordered {
 	border-width: 0px !important;
+} **/
+
+.siny-score {
+	font-size: 2em;
+}
+
+.siny-video {
+	padding: 40px 0;
 }
 

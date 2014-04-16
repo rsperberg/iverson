@@ -1,19 +1,21 @@
 <section class='container siny-games'>
   
 <div class="siny-detail">
+<div class="siny-score">
 <%= @game_stats.team.name %>
 <%	if @game_stats.is_home == true %>
 	<%= "(Home)" %>
 <%	else %>
 	<%=	"(Away)" %>
 <% end %>
-: <%= @game_stats.score %> | 
+: <%= @game_stats.score %><br> 
 
 TEAM <%= @game_stats.opponent_id %>: <%= @game_stats.opponent_score %><br>
+</div>
 LINK TO BOX SCORE<br>
     <div class='row'>		
 			<div class='col-sm-8'>
-<video width="100%" controls>
+<video class="siny-video" width="100%" controls>
 <source src="<%= @game_stats.video_url %>" type="video/mp4">
 	</video>
 	
