@@ -1,6 +1,6 @@
 class KrossoverGame
-  attr_accessor :ko_game_id, :game_date, :ko_team_id, :team_name, :logo, :score,
-    :opponent_name, :opponent_score, :video, :title, :summary
+  attr_accessor :ko_game_id, :date, :team_id, :team_name, :logo, :score,
+    :opponent_name, :opponent_score, :video_url, :title, :summary
 
   def initialize(game)
     set_attributes(game)
@@ -9,14 +9,17 @@ class KrossoverGame
   private
 
   def set_attributes(game)
-    @ko_game_id = ko_data["id"]
-    @game_date = ko_data["date"]
-    @ko_team_id = ko_data["team"][0]["id"]
-    @team_name = ko_data["team"][0]["name"]
-    @logo = ko_data["team"][0]["logo"]
-    @score = ko_data["team"][0]["score"]
-    @opponent_score = ko_data["team"][1]["score"]
-    @opponent_name = ko_data["team"][1]["name"]
-    @video = ko_data["video"]["streamingURL"]["videoServer"]
+    @ko_game_id = game["id"]
+    @date = game["date"]
+    @team_id = game["teams"][0]["id"]
+    @opponent_id = game["teams"][1]["id"]
+    @opponent_score = game["teams"][1]["score"]
+    @video_url = game["video"]["streamingUrl"]
+    set_score(game)
   end
+
+  def set_score(game)
+    @score = game["boxScore"]["sPTS"].nil? game["score"] : game["boxScore"]["sPTS"]
+  end
+
 end

@@ -3,7 +3,7 @@ class NarrativeScience
 attr_accessor :title, :summary
 
   def initialize(game_id)
-    set_attributes
+    set_attributes(game_id)
   end
 
   private
