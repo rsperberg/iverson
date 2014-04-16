@@ -1,0 +1,9 @@
+{
+"name": "Taki",
+"version": "0.0.0",
+"manifest_version": 2,
+"browser_action": {
+	"default_title": "Taki Tag",
+	"default_popup": "popup.html"
+ }
+}

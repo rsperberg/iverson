@@ -1,7 +1,6 @@
 <section class='container siny-games'>
-  
 <div class="siny-detail">
-<%= @game_stats.team.name %>
+<%= link_to @game_stats.team.name, "/team/show/#{@game_stats.team.id}" %>
 <%	if @game_stats.is_home == true %>
 	<%= "(Home)" %>
 <%	else %>
