@@ -10,7 +10,7 @@
 <% end %>
 : <%= @game_stats.score %><br> 
 
-TEAM <%= @game_stats.opponent_id %>: <%= @game_stats.opponent_score %><br>
+<%= Team.find(@game_stats.opponent_id).name %>: <%= @game_stats.opponent_score %><br>
 </div>
 LINK TO BOX SCORE<br>
     <div class='row'>		
