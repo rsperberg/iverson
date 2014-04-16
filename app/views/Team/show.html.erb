@@ -1,11 +1,11 @@
 <section class='container siny-games' id="siny-results">
 	    <div class='row'>		
 				<div class='col-sm-1'>
-<%= image_tag(@team.school.logo_url, :alt => @team.name, size: "75") %><br />
+<%= image_tag(@team.school.try(:logo_url), :alt => @team.name, size: "75") %><br />
 </div>
 <div class='col-sm-11'>
 <h2><%= @team.name %><br /></h2>
-<h3><%= @team.school.name %>, <%= @team.school.city + ', ' + @team.school.state %><br /></h3>
+<h3><%= @team.school.try(:name) %>, <%= @team.school.try(:city)%>, <%= @team.school.try(:state) %><br /></h3>
 <br />
 </div>
 </div>
@@ -22,7 +22,7 @@
 <% @team.games.each do |g| %>
 <tr text-align: 'center'>
 	<td><%= g.score %></td>
-	<td><%= Team.find(g.opponent_id).name %></td>
+	<td><%= g.opponent_name %></td>
 	<td><%= g.opponent_score %></td>
 	<td><%= g.date %></td>
 	<td><%= link_to "Watch Video", g.video_url %></td>

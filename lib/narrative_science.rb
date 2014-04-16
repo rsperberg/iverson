@@ -3,7 +3,7 @@ class NarrativeScience
 attr_accessor :title, :summary
 
   def initialize(game_id)
-    set_attributes
+    set_attributes(game_id)
   end
 
   private
@@ -23,8 +23,11 @@ attr_accessor :title, :summary
   end
 
   def set_attributes(game_id)
-    get_data(game_id)
-    @title = get_data["response"]["title"]
-    @summary = get_data["response"]["paragraphs"]
+    data = get_data(game_id)
+
+    if !data["response"].nil?
+      @title = data["response"]["title"]
+      @summary = data["response"]["paragraphs"].join
+    end
   end
 end

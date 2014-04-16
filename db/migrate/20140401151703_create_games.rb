@@ -10,7 +10,6 @@ class CreateGames < ActiveRecord::Migration
       t.integer :team_id
       t.integer :opponent_score
       t.integer :opponent_id
-
       t.timestamps
     end
   end

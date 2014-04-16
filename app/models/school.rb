@@ -1,7 +1,9 @@
 class School < ActiveRecord::Base
   has_many :teams
-  search = search 
-  def self.search(search)	 
-  	self.includes(:teams).where("schools.name LIKE ? OR state LIKE ? OR city LIKE ? OR teams.name LIKE?", "%#{search || search.capitalize}%","%#{search || search.capitalize}%","%#{search || search.capitalize}%","%#{search || search.capitalize}%").references(:teams)
-  	end
+
+
+  def self.search(search)
+  	self.includes(:teams).where("LOWER(schools.name) LIKE ? OR LOWER(state) LIKE ? OR LOWER(city) LIKE ? OR LOWER(teams.name) LIKE?", "%#{search.downcase}%","%#{search.downcase}%","%#{search.downcase}%","%#{search.downcase}%").references(:teams)
+  end
+
 end
