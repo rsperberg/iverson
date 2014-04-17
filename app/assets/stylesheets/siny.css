@@ -94,9 +94,6 @@
 	font-weight: 300;
 }
 
-/** td, th, tbody, .table-bordered {
-	border-width: 0px !important;
-} **/
 
 .siny-score {
 	font-size: 2em;
@@ -104,5 +101,13 @@
 
 .siny-video {
 	padding: 40px 0;
+}
+
+#siny-boxscore {
+	margin: 40px 0 0;
+}
+
+th {
+	background-color: #e0e0e0 !important;
 }
 

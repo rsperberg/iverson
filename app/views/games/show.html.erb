@@ -1,6 +1,7 @@
 <section class='container siny-games'>
 <div class="siny-detail">
 <div class="siny-score">
+
 <%= link_to @game_stats.team.name, "/team/show/#{@game_stats.team.id}" %>
 
 <%	if @game_stats.is_home == true %>
@@ -12,7 +13,30 @@
 
 <%= @game_stats.opponent_name %>: <%= @game_stats.opponent_score %><br>
 </div>
-LINK TO BOX SCORE<br>
+
+<table class="table table-striped" id="siny-boxscore">
+	<tr>
+	<th>Team</th>
+  <% @game_stats.boxscore.each do |name, number| -%>
+  <th><%= name %></th>
+    <% end -%>
+  </tr>
+  <tr>
+	  <td><%= @game_stats.team.name %></td>
+    <% @game_stats.boxscore.each do |name, number| -%>
+  <td><%= number %></td>
+  <% end -%>
+</tr>
+<td><%= @game_stats.opponent_name %></td>
+  <% @game_stats.opponent_boxscore.each do |name, number| -%>
+  <td><%= number %></td>
+    <% end -%>
+  </tr>
+</table>
+
+
+
+<br>
     <div class='row'>		
 			<div class='col-sm-8'>
 <video class="siny-video" width="100%" controls>
