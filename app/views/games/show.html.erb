@@ -18,7 +18,7 @@
 	<tr>
 	<th>Team</th>
   <% @game_stats.boxscore.each do |name, number| -%>
-  <th><%= name %></th>
+  <th><%= name.slice(1..5) %></th>
     <% end -%>
   </tr>
   <tr>
