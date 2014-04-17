@@ -10,8 +10,8 @@
 				<%= link_to g.team.name, controller: "team", action: "show", id: g.team.id %> <%= g.score %><br>
 					<%= link_to g.opponent_name, controller: "team", action: "show", id: g.opponent_id %> <%= g.opponent_score %><br/>
 				</div>
-				<%= link_to g.summary, controller: "games", action: "show", id: g.id %><br/>
-				<a href="#">Box Score</a></br>
+				<%= link_to g.summary.truncate(35), controller: "games", action: "show", id: g.id %><br/>
+				
 				<%= g.date %><br/>
 			</div>
 		<% end %>
