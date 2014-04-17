@@ -8,7 +8,7 @@
 			<div class='col-sm-4 siny-game'>
 				<div class="siny-team-links">
 				<%= link_to g.team.name, controller: "team", action: "show", id: g.team.id %> <%= g.score %><br>
-					<%= link_to g.opponent_name, controller: "team", action: "show", id: g.opponent_id %> <%= g.opponent_score %><br/>
+					<%= g.opponent_name %> <%= g.opponent_score %><br/>
 				</div>
 				<%= link_to g.summary.truncate(35), controller: "games", action: "show", id: g.id %><br/>
 				
