@@ -104,7 +104,7 @@ twttr.conversion.track('1sf598', '1', ' ');
                         </a></div>
                         
                    
-                               <div class="siny-search"><%= render :partial => 'school/search' %></div> 
+                               <div class="siny-search"><%= render partial: 'schools/search' %></div> 
 						   
                     <div class="hidden-xs visible-sm visible-md visible-lg">
                         <ul class="nav navbar-nav">
@@ -115,9 +115,9 @@ twttr.conversion.track('1sf598', '1', ' ');
                                                                                     </ul>
                                                                     </li>
                                                           
-														<li><%= link_to "Teams", controller: "team", action: "index" %></li>
-               <li><%= link_to "Games", controller: "home", action: "index" %></li>
-               <li><%= link_to "Schools", controller: "school", action: "index" %></li>
+														<li><%= link_to "Teams", teams_path %></li>
+               <li><%= link_to "Games", root_path %></li>
+               <li><%= link_to "Schools", schools_path %></li>
                                                            
                                                     
                     </div>

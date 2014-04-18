@@ -1,0 +1,23 @@
+<section class='container siny-games' id="siny-results">
+<table class="table table-striped">
+		<tr>
+			<th><b>School</b></th>
+			<th><b>Team</b></th>
+			<th><b>City</b></th>
+			<th>State</b></th>
+		</tr>
+		<%@results.each do |result|%>
+
+		
+		<tr>
+			<td><%=link_to result.name, result %></td>
+			<td><%result.teams.each do |team|%>
+				<%=link_to team.name, team %>
+				<% end %>
+			</td>
+			<td><%=result.city%></td>
+			<td><%=result.state%></td>
+	</tr>
+<%end%>
+</table>
+</section>

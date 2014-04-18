@@ -1,0 +1,32 @@
+<section class='container siny-games' id="siny-results">
+	    <div class='row'>		
+				<div class='col-sm-1'>
+<%= image_tag(@team.school.try(:logo_url), :alt => @team.name, size: "75") %><br />
+</div>
+<div class='col-sm-11'>
+<h2><%= @team.name %><br /></h2>
+<h3><%= @team.school.try(:name) %>, <%= @team.school.try(:city)%>, <%= @team.school.try(:state) %><br /></h3>
+<br />
+</div>
+</div>
+<h2 id="siny-history">Game History</h2>
+<table class="table table-striped">
+<tr>
+	<td>Score</td>
+	<td>Opponent</td>
+	<td>Opponent Score</td>
+	<td>Date</td>
+	<td>Video Link</td>
+</tr>
+
+<% @team.games.each do |g| %>
+<tr text-align: 'center'>
+	<td><%= g.score %></td>
+	<td><%= g.opponent_name %></td>
+	<td><%= g.opponent_score %></td>
+	<td><%= g.date %></td>
+	<td><%= link_to "Watch Video", g.video_url %></td>
+</tr>
+<% end %>
+
+</table>

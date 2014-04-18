@@ -2,7 +2,7 @@
 <div class="siny-detail">
 <div class="siny-score">
 
-<%= link_to @game_stats.team.name, "/team/show/#{@game_stats.team.id}" %>
+<%= link_to @game_stats.team.name, @game_stats.team  %>
 
 <%	if @game_stats.is_home == true %>
 	<%= "(h):" %>

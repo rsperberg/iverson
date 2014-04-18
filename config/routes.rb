@@ -4,16 +4,15 @@ Iverson::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  get '/' => 'home#index'
-  get '/team/show/:id' => 'team#show'
-  get '/team/index' => 'team#index'
-  
-  post '/school/search'
-  get '/school/show/:id' => 'school#show'
-  get '/school/index' => 'school#index'
+  root 'home#index'
+  get '/teams/:id', to: 'teams#show', as: 'team'
+  get '/teams', to: 'teams#index'
+  post '/schools/search'
+  get '/schools/show/:id' => 'schools#show', as: 'school'
+  get '/schools' => 'schools#index'
 
-  get '/games/:id' => 'games#show'
-  get '/teams' => 'team#index'
+  get '/games/:id' => 'games#show', as: 'game'
+  #get '/teams' => 'team#index'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
