@@ -4,13 +4,17 @@
 
 <section class='container siny-games'>
     <div class='row'>		
-		<% @game.first(9).each do |g| %>
+		<% @game.first(21).each do |g| %>
 			<div class='col-sm-4 siny-game'>
 				<div class="siny-team-links">
 				<%= link_to g.team.name, g.team %> <%= g.score %><br>
 					<%= g.opponent_name %> <%= g.opponent_score %><br/>
 				</div>
-				<%= link_to g.summary.truncate(35), g %><br/>
+				<% if g.summary != nil %>
+				<%= link_to  g.summary.truncate(35), g %><br/>
+				<% else %>
+				<%= link_to g.summary, g %><br/>
+				<% end %>
 				
 				<%= g.date %><br/>
 			</div>
