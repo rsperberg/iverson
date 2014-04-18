@@ -14,8 +14,9 @@
 <tr>
 	<td>Score</td>
 	<td>Opponent</td>
-	<td>Opponent Score</td>
+	<td>Opponent Score!</td>
 	<td>Date</td>
+	<td>Summary</td>
 	<td>Video Link</td>
 </tr>
 
@@ -25,6 +26,7 @@
 	<td><%= g.opponent_name %></td>
 	<td><%= g.opponent_score %></td>
 	<td><%= g.date %></td>
+	<td><%= link_to  g.summary.truncate(35), g %></td>
 	<td><%= link_to "Watch Video", g.video_url %></td>
 </tr>
 <% end %>
