@@ -8,7 +8,7 @@ class KrossoverSchool
   private
 
   def set_attributes(data)
-    @name = data["name"]
+    @name = data["institution"]["name"]
     @logo_url = data["logo"]
     @ko_school_id = data["institution"]["id"]
     @city = data["institution"]["city"]
