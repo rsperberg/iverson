@@ -1,8 +1,8 @@
 class TeamController < ApplicationController
 	def index
-		@teams = Team.all
+		@teams = Team.find(:all, :order => 'name'))
 	end
-	
+
 	def show
 		@team = Team.find(params[:id])
 	end

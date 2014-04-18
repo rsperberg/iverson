@@ -1,6 +1,6 @@
 class SchoolController < ApplicationController
 	helper :all
-	
+
 	def search
 		@results = School.search(params[:search])
 	end
@@ -8,11 +8,11 @@ class SchoolController < ApplicationController
 		@school = School.find(params[:id])
 		#@school_image = grab_image("#{@school.name}")
 	end
-	
+
 	def index
-		@schools = School.all
+		@schools = School.find(:all, :order => 'name')
 	end
-	
+
 	def show
 		@school = School.find(params[:id])
 	end
