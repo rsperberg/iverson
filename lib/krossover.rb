@@ -1,9 +1,13 @@
 require 'httparty'
 require 'debugger'
 require 'pry'
+require 'dotenv-rails'
+require "#{Rails.root}/lib/krossover_team.rb"
+require "#{Rails.root}/lib/krossover_school.rb"
+require "#{Rails.root}/lib/krossover_game.rb"
+require "#{Rails.root}/lib/narrative_science.rb"
 
 class Krossover
-  # include Game
 
   def initialize
     get_ko_data
@@ -30,6 +34,7 @@ class Krossover
     local_game = Game.where(ko_game.as_json).first_or_initialize()
 
     if local_game.new_record?
+
       local_game.team_id = ko_team.id
       #boxscore updates wil nil logic
       if !team["boxScore"].nil?
@@ -70,4 +75,4 @@ class Krossover
 end
 
 a = Krossover.new
-puts a.get_ko_data
+puts a
